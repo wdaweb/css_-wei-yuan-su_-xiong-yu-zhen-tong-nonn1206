@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+* {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      color: rgb(170, 166, 166);
+    }
+    /* 中心黑 */
+.box{
+    width: 35px;
+    height: 82px;
+    background: black;
+    position:relative;
+    
+    }
+/* 中心左 */
+    .box::before{
+        content: 'Made in Taiwan';
+        height: 80px;
+        width: 140px;
+        border: 1px solid rgb(161, 161, 161);
+        background: linear-gradient(180deg, whitesmoke 40%, rgb(236, 232, 232) 50%, rgb(219, 215, 215) 60%, rgb(236, 232, 232) 70%, white 100%);
+        position: absolute;
+        top: 0;    
+      right: 100%;
+      line-height: 140px;
+    }
+    /* 中心右 */
+    .box::after{
+        content: '';
+        height: 80px;
+        width: 140px;
+        border: 1px solid rgb(161, 161, 161);
+        background: linear-gradient(180deg, LemonChiffon 40%,rgb(219, 215, 215) 50%,LemonChiffon 100%);
+        position: absolute;
+        top: 0;    
+      left: 100%;
+    }
+
+      /* 刻度 */
+      .box3{
+        height: 15px;
+        width: 140px;
+        background:linear-gradient(90deg, whitesmoke 5%,rgb(161, 161, 161) 6%,whitesmoke 7%,whitesmoke 15%,rgb(161, 161, 161) 16%,whitesmoke 17%,whitesmoke 25%,rgb(161, 161, 161) 26%,whitesmoke 27%,whitesmoke 35%,rgb(161, 161, 161) 36%,whitesmoke 37%,whitesmoke 45%,rgb(161, 161, 161) 46%,whitesmoke 47%,whitesmoke 55%,rgb(161, 161, 161) 56%,whitesmoke 57%,whitesmoke 65%,rgb(161, 161, 161) 66%,whitesmoke 67%,whitesmoke 75%,rgb(161, 161, 161) 76%,whitesmoke 77%,whitesmoke 85%,rgb(161, 161, 161) 86%,whitesmoke 87%,whitesmoke 95%,rgb(161, 161, 161) 96%,whitesmoke 97%,whitesmoke 100%);
+        position: absolute;
+        top: 0%;    
+      right:103%;
+      border-top: 1px solid rgb(161, 161, 161);
+    }
+
+    .box3::before{
+        content: '';
+        height: 15px;
+        width: 140px;
+        background:blue;
+        position: absolute;
+        top: 0%;    
+      left:126%;
+      border-top: 0.5px solid rgb(161, 161, 161);
+      background: linear-gradient(90deg, LemonChiffon 5%,rgb(161, 161, 161) 6%,LemonChiffon 7%,LemonChiffon 15%,rgb(161, 161, 161) 16%,LemonChiffon 17%,LemonChiffon 25%,rgb(161, 161, 161) 26%,LemonChiffon 27%,LemonChiffon 35%,rgb(161, 161, 161) 36%,LemonChiffon 37%,LemonChiffon 45%,rgb(161, 161, 161) 46%,LemonChiffon 47%,LemonChiffon 55%,rgb(161, 161, 161) 56%,LemonChiffon 57%,LemonChiffon 65%,rgb(161, 161, 161) 66%,LemonChiffon 67%,LemonChiffon 75%,rgb(161, 161, 161) 76%,LemonChiffon 77%,LemonChiffon 85%,rgb(161, 161, 161) 86%,LemonChiffon 87%,LemonChiffon 95%,rgb(161, 161, 161) 96%,LemonChiffon 97%,LemonChiffon 100%);
+      z-index: 1;
+    }
+/* 長方形 */
+    .box2{
+        width: 380px;
+        height: 60px;
+        border-radius: 3%;
+        border: 1px solid rgb(161, 161, 161);
+        background: linear-gradient(180deg, white 40%, rgb(236, 232, 232) 50%, rgb(219, 215, 215) 60%, rgb(236, 232, 232) 70%, white 100%);
+        position: absolute;
+        top: 13%;
+        left: -500%;
+        z-index: -1;
+    }
+/* 尾端 */
+    .box2::before{
+        content: '';
+        width: 35px;
+        height: 82px;
+        border-radius: 10%;
+        border: 1px solid rgb(161, 161, 161);
+        background: linear-gradient(180deg, whitesmoke 40%, rgb(236, 232, 232) 50%, rgb(219, 215, 215) 60%, rgb(236, 232, 232) 70%, white 100%);
+        position: absolute;
+        top: -20%;
+        right: 100%;
+
+        
+    }
+/* 針頭 */
+    .box2::after{
+        content: '';
+        width: 80px;
+        height: 1px;    
+        background: black;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+          
+    }
+
+  
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="box3"></div>
+        <div class="box2"></div>
+        
+    </div>
+</body>
+</html>
